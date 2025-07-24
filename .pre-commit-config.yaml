@@ -45,10 +45,10 @@ repos:
     rev: v0.8.0
     hooks:
     -   id: pre-commit-update
--   repo: https://github.com/python-poetry/poetry-plugin-export
-    rev: 1.9.0
-    hooks:
-    -   id: poetry-export
-        name: Export requirements.txt from Poetry
-        args: ["--dev", "-f", "requirements.txt", "-o", "requirements.txt", "--without-hashes"]
-        verbose: true
+# -   repo: https://github.com/python-poetry/poetry-plugin-export
+#     rev: 1.9.0
+#     hooks:
+#     -   id: poetry-export
+#         name: Export requirements.txt from Poetry
+#         args: ["--dev", "-f", "requirements.txt", "-o", "requirements.txt", "--without-hashes"]
+#         verbose: true
