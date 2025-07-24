@@ -1,0 +1,54 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: trailing-whitespace
+        args: ['--markdown-linebreak-ext=md']
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-toml
+    -   id: detect-private-key
+    -   id: check-added-large-files
+-   repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+    -   id: black
+        name: black
+        description: "Black: The uncompromising Python code formatter"
+        entry: black
+        language: python
+        language_version: python3.12
+        minimum_pre_commit_version: 2.9.2
+        require_serial: true
+        types_or: [python, pyi]
+    -   id: black-jupyter
+        name: black-jupyter
+        description: "Black: The uncompromising Python code formatter (with Jupyter
+          Notebook support)"
+        entry: black
+        language: python
+        language_version: python3.12
+        minimum_pre_commit_version: 2.9.2
+        require_serial: true
+        types_or: [python, pyi, jupyter]
+        additional_dependencies: [".[jupyter]"]
+-   repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+    -   id: isort
+        name: isort (python)
+-   repo: https://github.com/pycqa/flake8
+    rev: 7.3.0
+    hooks:
+    -   id: flake8
+-   repo: https://gitlab.com/vojko.pribudic.foss/pre-commit-update
+    rev: v0.8.0
+    hooks:
+    -   id: pre-commit-update
+-   repo: https://github.com/python-poetry/poetry-plugin-export
+    rev: 1.9.0
+    hooks:
+    -   id: poetry-export
+        name: Export requirements.txt from Poetry
+        args: ["--dev", "-f", "requirements.txt", "-o", "requirements.txt", "--without-hashes"]
+        verbose: true
