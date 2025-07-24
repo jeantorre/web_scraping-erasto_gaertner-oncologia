@@ -41,10 +41,10 @@ repos:
     rev: 7.3.0
     hooks:
     -   id: flake8
--   repo: https://gitlab.com/vojko.pribudic.foss/pre-commit-update
-    rev: v0.8.0
-    hooks:
-    -   id: pre-commit-update
+# -   repo: https://gitlab.com/vojko.pribudic.foss/pre-commit-update
+#     rev: v0.8.0
+#     hooks:
+#     -   id: pre-commit-update
 # -   repo: https://github.com/python-poetry/poetry-plugin-export
 #     rev: 1.9.0
 #     hooks:
