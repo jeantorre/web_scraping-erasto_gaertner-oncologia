@@ -17,7 +17,8 @@ dependencies = [
     "mkdocstrings-python (>=1.16.12,<2.0.0)",
     "taskipy (>=1.14.1,<2.0.0)",
     "pytest (>=8.4.1,<9.0.0)",
-    "ignr (>=2.2,<3.0)"
+    "ignr (>=2.2,<3.0)",
+    "beautifulsoup4 (>=4.13.4,<5.0.0)"
 ]
 
 
